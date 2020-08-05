@@ -69,20 +69,24 @@ const Header = props =>{
                                                     <p>登出</p>
                                                 </a>
                                             </li>
+                                            <li  className="cart-box" onClick={goCart}>
+                                                <i className="fas fa-shopping-cart"></i>
+                                                <p className="cart-num">(0)</p>
+                                            </li>
                                     </React.Fragment>
 
                                 ):(
                                     <React.Fragment>
                                         <li><Link to="/login" className="login"><p>登入</p></Link></li>
                                         <li><Link to="/register" className="sign-in"><p>註冊帳號</p></Link></li>
-                                    
+                                        <li  className="cart-box" onClick={goCart}>
+                                                <i className="fas fa-shopping-cart"></i>
+                                                <p className="cart-num">({props.cartNum})</p>
+                                        </li>
                                     </React.Fragment>
 
                                 )}
-                                    <li  className="cart-box" onClick={goCart}>
-                                                <i className="fas fa-shopping-cart"></i>
-                                                <p className="cart-num">({props.cartNum})</p>
-                                    </li>
+                                   
                             </div>
 
                         </ul>
