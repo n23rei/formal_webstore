@@ -4,7 +4,7 @@ import auth from "commons/auth";
 const axios = baseURL => {
     const instance = _axios.create({
         baseURL:
-            baseURL || process.env.REACT_APP_API_DOMAIN || 'http://localhost:3003',
+            baseURL || process.env.REACT_APP_API_DOMAIN || 'https://webstorenashi-api.herokuapp.com/',
         timeout: 1000
     });
 
