@@ -58,7 +58,7 @@ const Header = props =>{
                             </div>
                             <div className="login-part">
                                 {props.user.nickname?(
-                                     <React.Fragment>
+                                    <React.Fragment>
                                             <li className="nickname">
                                                 Hello，
                                                 {/* <i className="fas fa-user-alt fa-2x"></i> */}
@@ -71,7 +71,7 @@ const Header = props =>{
                                             </li>
                                             <li  className="cart-box" onClick={goCart}>
                                                 <i className="fas fa-shopping-cart"></i>
-                                                <p className="cart-num">(0)</p>
+                                                <p className="cart-num">({props.cartNum})</p>
                                             </li>
                                     </React.Fragment>
 
@@ -81,12 +81,11 @@ const Header = props =>{
                                         <li><Link to="/register" className="sign-in"><p>註冊帳號</p></Link></li>
                                         <li  className="cart-box" onClick={goCart}>
                                                 <i className="fas fa-shopping-cart"></i>
-                                                <p className="cart-num">({props.cartNum})</p>
+                                                <p className="cart-num">(0)</p>
                                         </li>
                                     </React.Fragment>
 
                                 )}
-                                   
                             </div>
 
                         </ul>
