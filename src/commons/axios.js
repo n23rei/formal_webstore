@@ -8,18 +8,18 @@ const axios = baseURL => {
         timeout: 1000
     });
 
-    instance.interceptors.request.use(
-        config => {
-            const jwToken = auth.getToken();
-            config.headers['Authorization'] = 'Bearer ' + jwToken;
-        // Do something before request is sent
-            return config;
-        },
-        error => {
-        // Do something with request error
-            return Promise.reject(error);
-        }
-    );
+    // instance.interceptors.request.use(
+    //     config => {
+    //         const jwToken = auth.getToken();
+    //         config.headers['Authorization'] = 'Bearer ' + jwToken;
+    //     // Do something before request is sent
+    //         return config;
+    //     },
+    //     error => {
+    //     // Do something with request error
+    //         return Promise.reject(error);
+    //     }
+    // );
 
     return instance;
 };
