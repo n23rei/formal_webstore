@@ -26,19 +26,19 @@ const Router = props => {
         setTabIndex(tabIndex);
 
         if(tabIndex===0){
-            const res = await axios.get(`http://localhost:3003/products?category=1`);
+            const res = await axios.get(`https://webstorenashi-api.herokuapp.com/products?category=1`);
             const newProducts = res.data;
             setNewProducts(newProducts);
 
             // console.log("newProducts",newProducts);
         }else if (tabIndex === 1){
-            const res = await axios.get(`http://localhost:3003/products?category=2`);
+            const res = await axios.get(`https://webstorenashi-api.herokuapp.com/products?category=2`);
             const newProducts = res.data;
             setNewProducts(newProducts);
             console.log("newProducts",newProducts);
 
         }else if (tabIndex ===2){
-            const res = await axios.get(`http://localhost:3003/products?category=3`);
+            const res = await axios.get(`https://webstorenashi-api.herokuapp.com/products?category=3`);
             const newProducts = res.data;
             setNewProducts(newProducts);
             console.log("newProducts",newProducts);

@@ -28,7 +28,7 @@ class Products extends React.Component{
         //         }) ;
         //     });
         function fetchByCategoryId(categoryId, callback) {
-            axios.get(`http://localhost:3003/products?category=${categoryId}`)
+            axios.get(`https://webstorenashi-api.herokuapp.com/products?category=${categoryId}`)
             .then(response=> callback(response));
         }
 

@@ -4,7 +4,7 @@ import auth from "commons/auth";
 
 const Clip_on = props =>{
     const aaa= async () => {
-        axios.get(`http://localhost:3003/products?category=1`)
+        axios.get(`https://webstorenashi-api.herokuapp.com/products?category=1`)
         .then(
             response=>{
                 this.setState ({
